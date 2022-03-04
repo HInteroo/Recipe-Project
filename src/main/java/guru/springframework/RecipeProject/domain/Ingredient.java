@@ -11,6 +11,9 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
+    @OneToOne
+    private unitOfMeasure uom;
+
     @ManyToOne
     private Recipe recipe;
 
