@@ -48,4 +48,12 @@ public class Ingredient {
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
     }
+
+    public unitOfMeasure getUom() {
+        return uom;
+    }
+
+    public void setUom(unitOfMeasure uom) {
+        this.uom = uom;
+    }
 }
