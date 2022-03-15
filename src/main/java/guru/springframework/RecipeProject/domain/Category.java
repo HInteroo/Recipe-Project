@@ -1,8 +1,13 @@
 package guru.springframework.RecipeProject.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 import java.util.Set;
 
+@Data
+@EqualsAndHashCode(exclude = {"recipeset"})
 @Entity
 public class Category {
 
@@ -14,27 +19,4 @@ public class Category {
     @ManyToMany(mappedBy = "categorySet")
     private Set<Recipe> recipeset;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Set<Recipe> getRecipeset() {
-        return recipeset;
-    }
-
-    public void setRecipeset(Set<Recipe> recipeset) {
-        this.recipeset = recipeset;
-    }
 }
